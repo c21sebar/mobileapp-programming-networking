@@ -1,9 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/bergListTextItem"
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="BERGNAMN"
-    android:textSize="48sp"
-    android:textColor="@color/colorBlack"
-    />
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical">
+
+    <TextView
+        android:textColor="@color/colorBlack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bergListTextItem"
+        android:text="TextView">
+
+    </TextView>
+    <TextView
+        android:textColor="@color/colorBlack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ID"
+        android:text="ID">
+
+    </TextView>
+    <TextView
+        android:textColor="@color/colorBlack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/name"
+        android:text="name">
+
+    </TextView>
+    <TextView
+        android:textColor="@color/colorBlack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/type"
+        android:text="type">
+
+    </TextView>
+    <TextView
+        android:textColor="@color/colorBlack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/company"
+        android:text="company">
+
+    </TextView>
+    <TextView
+        android:textColor="@color/colorBlack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/location"
+        android:text="location">
+
+    </TextView>
+    <TextView
+        android:textColor="@color/colorBlack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/category"
+        android:text="category">
+
+    </TextView>
+    <TextView
+        android:textColor="@color/colorBlack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/size"
+        android:text="size">
+
+    </TextView>
+    <TextView
+        android:textColor="@color/colorBlack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cost"
+        android:text="cost">
+
+    </TextView>
+
+    <TextView
+        android:textColor="@color/colorBlack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/wiki"
+        android:text="wiki">
+
+    </TextView>
+    <TextView
+
+        android:textColor="@color/colorBlack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/img"
+        android:text="img">
+
+    </TextView>
+</LinearLayout>
