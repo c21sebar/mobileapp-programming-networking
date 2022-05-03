@@ -1,5 +1,6 @@
 package com.example.networking;
 
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,14 +17,14 @@ import java.util.List;
 
 public class MountainAdapter extends RecyclerView.Adapter<MountainAdapter.MountainAdapterViewHolder> {
     private List<Mountain> bergLista;
-
+    private MainActivity mainActivity;
     public void setBergLista(List<Mountain> bergLista) {
         this.bergLista = bergLista;
     }
 
-    public MountainAdapter(List<Mountain> berg){
-
+    public MountainAdapter(List<Mountain> berg, MainActivity activity){
         this.bergLista = berg;
+        this.mainActivity = activity;
     }
 
     @NonNull
@@ -55,6 +56,7 @@ public class MountainAdapter extends RecyclerView.Adapter<MountainAdapter.Mounta
     }
 
     public class MountainAdapterViewHolder extends RecyclerView.ViewHolder {
+
         TextView MountainTextView;
         TextView ID;
         TextView name;
@@ -86,9 +88,17 @@ public class MountainAdapter extends RecyclerView.Adapter<MountainAdapter.Mounta
                 @Override
                 public void onClick(View view) {
                     Log.d("RecyclerView", "onClick：" + getBindingAdapterPosition());
+                    clickToSecond();
+
                 }
             });
 
+        }
+        void clickToSecond(){
+            Log.d("RecyclerView", "onClick：START SECOND ACTIVITY");
+            Intent intent = new Intent(mainActivity, SecondActivity.class);
+            intent.putExtra("Test", "Value");
+            mainActivity.startActivity(intent);
         }
     }
 }

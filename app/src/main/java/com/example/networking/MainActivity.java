@@ -12,8 +12,10 @@ import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
-import java.util.Arrays;
+
 import java.util.List;
+import android.content.Intent;
+
 
 @SuppressWarnings("FieldCanBeLocal")
 public class MainActivity extends AppCompatActivity implements JsonTask.JsonTaskListener {
@@ -22,7 +24,7 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
     private final String JSON_FILE = "mountains.json";
 
     List<Mountain> bergLista = new ArrayList<>();
-    MountainAdapter bergAdapter= new MountainAdapter(bergLista);
+    MountainAdapter bergAdapter= new MountainAdapter(bergLista,this);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
