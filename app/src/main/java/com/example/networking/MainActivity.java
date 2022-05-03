@@ -29,8 +29,6 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         setContentView(R.layout.activity_main);
         new JsonTask(this).execute(JSON_URL); //för url
         //new JsonFile(this, this).execute(JSON_FILE); //För lokalt
-
-        List<String> bergNamn = Arrays.asList("Kinnekulle", "Billingen", "K2", "Kebnekaise", "Halle Berg", "Hunne Berg");
         recyclerView = findViewById(R.id.recycler_view1);
 
         recyclerView.setAdapter(bergAdapter);
