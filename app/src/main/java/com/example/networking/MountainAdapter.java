@@ -97,7 +97,7 @@ public class MountainAdapter extends RecyclerView.Adapter<MountainAdapter.Mounta
         void clickToSecond(){
             Log.d("RecyclerView", "onClick：START SECOND ACTIVITY");
             Intent intent = new Intent(mainActivity, SecondActivity.class);
-            intent.putExtra("Test", "Value");
+            intent.putExtra("Test", "" + name.getText());
             mainActivity.startActivity(intent);
         }
     }
